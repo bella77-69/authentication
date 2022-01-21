@@ -4,10 +4,10 @@ const MongoClient = require('mongodb').MongoClient
 const app = express()
 
 require('./dotenv')
-
+const connectionString = process.env.DB_URL
 
 MongoClient.connect(
-  "mongodb+srv://test:test@cluster0.abdec.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  connectionString,
   { useUnifiedTopology: true }
 ) .then(client => {
     console.log('Connected to Database')

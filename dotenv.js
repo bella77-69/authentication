@@ -16,3 +16,4 @@ function updateEnv (pathToConfig) {
 }
 
 // Update Environment variables
+updateEnv('./.env')
